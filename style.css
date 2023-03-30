@@ -28,3 +28,9 @@ body {
     color: rgb(3, 3, 3);
     text-align: center;
 }
+
+h1 {
+    font-size: 40px;
+    margin-top: 40px;
+}
+
