@@ -1,7 +1,7 @@
-var startBtn = document.getElementById("#start");
+var startBtn = document.getElementById("start");
+var quizQuestions = document.getElementById("questions")
 
-
-const questions = [
+const quizQuestions = [
     //Question 1
    {
     question1: "Commonly used data types DO Not include:",
@@ -51,6 +51,25 @@ const questions = [
 //Keep track of the user's score
 let score = 0;
 
-startBtn.onclick = function(Questions){
+//Keep track of the current question
+let currentQuestionIndex = 0;
 
-}
+// Set the initial question
+question.textContent = questions[currentQuestionsIndex];
+
+startBtn,addEventListener("click", function() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length){
+        question.textContent = questions[currentQuestionIndex];
+    } else {
+        startBtn.disabled = true;
+    }
+})
+
+// for (let i=0; i < quizQuestions.clientHeight; i++){
+
+// }
+
+// startBtn.onclick = function(Questions){
+
+// }
