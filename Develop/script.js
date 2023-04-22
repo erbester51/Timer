@@ -1,5 +1,5 @@
-var startBtn = document.getElementById("start");
-var quizQuestions = document.getElementById("questions")
+// var startBtn = document.getElementById("start");
+// var quizQuestions = document.getElementById("questions")
 
 const quizQuestions = [
     //Question 1
@@ -57,18 +57,17 @@ let currentQuestionIndex = 0;
 // Set the initial question
 question.textContent = questions[currentQuestionsIndex];
 
-startBtn,addEventListener("click", function() {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length){
-        question.textContent = questions[currentQuestionIndex];
-    } else {
-        startBtn.disabled = true;
-    }
-})
+for (let i=0; i < quizQuestions.length; i++){
+    startBtn,addEventListener("click", function() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length){
+            question.textContent = questions[currentQuestionIndex];
+        } else {
+            startBtn.disabled = true;
+        }
+    });
+};
 
-// for (let i=0; i < quizQuestions.clientHeight; i++){
-
-// }
 
 // startBtn.onclick = function(Questions){
 
